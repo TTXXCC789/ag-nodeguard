@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible NodeGuard problem using redacted diagnostics.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste subscription URLs, proxy credentials, access tokens, CSRF values, complete profiles/logs, conversation IDs, prompts, or model output. Security issues must use Private Vulnerability Reporting instead.
+  - type: input
+    id: version
+    attributes:
+      label: NodeGuard version
+      placeholder: 0.5.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS, Clash Verge Rev, Mihomo, and Anti Gravity versions.
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Menu-bar app / dashboard
+        - Daemon / health monitoring
+        - Subscription discovery
+        - Mihomo switching / connections
+        - Background Retry / CDP
+        - Installation / removal
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic node/profile names and redact local data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Redacted doctor/status output
+      render: shell
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed subscription URLs, credentials, IPs, personal paths, conversation IDs, prompts, responses, and unrelated log content.
+          required: true
+        - label: This report is not a security vulnerability.
+          required: true

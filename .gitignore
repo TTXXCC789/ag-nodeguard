@@ -1,0 +1,26 @@
+# Build outputs
+/bin/
+/dist/
+/macos-app/.build/
+
+# Local runtime data (never commit)
+config.yaml
+state.json
+paused
+*.log
+*.sock
+ag-nodeguard-runtime.yaml
+managed-paths.json
+subscriptions.json
+
+# Clash/Antigravity local data
+profiles.yaml
+clash-verge.yaml
+language_server.log
+
+# macOS and editors
+.DS_Store
+*.swp
+*.xcuserstate
+.idea/
+.vscode/

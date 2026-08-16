@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a focused improvement to NodeGuard.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed behavior
+      description: Describe the expected behavior and user-visible result.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Routing, privacy, and Retry impact
+      description: Explain whether this affects routing scope, local sensitive data, internal APIs, or task resubmission.
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: The proposal does not require foreground mouse/screen automation.
+          required: true
+        - label: I did not include subscription URLs, credentials, logs, or conversation content.
+          required: true
