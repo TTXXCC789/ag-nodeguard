@@ -36,6 +36,7 @@ fi
 /bin/cp "${project_dir}/bin/ag-nodeguard" "${contents}/Resources/ag-nodeguard"
 /bin/cp "${app_dir}/Resources/Info.plist" "${contents}/Info.plist"
 /bin/chmod 755 "${contents}/MacOS/AntiGravityNodeGuardUI" "${contents}/Resources/ag-nodeguard"
+/usr/bin/strip -S "${contents}/MacOS/AntiGravityNodeGuardUI"
 
 icon_work=$(/usr/bin/mktemp -d)
 trap '/bin/rm -rf "$icon_work"' EXIT
