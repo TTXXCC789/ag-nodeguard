@@ -12,7 +12,7 @@ permissions:
 jobs:
   macos:
     name: Go, Swift, and app bundle
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 30
     steps:
       - name: Check out source
